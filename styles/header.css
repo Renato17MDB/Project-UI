@@ -59,7 +59,6 @@ header{
     top: 100%; 
     width: 20vw;
     z-index: 10;
-    padding: 12px 9px;
 }
 /* Exibe o dropdown ao clicar */
 .menu-list.show{
