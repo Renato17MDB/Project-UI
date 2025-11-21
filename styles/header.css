@@ -53,7 +53,7 @@ header{
     line-height: 28px; 
     list-style: none; 
     position: absolute; 
-    top: 5%; 
+    top: 15%; 
     z-index: 5;
 }
 /* Exibe o dropdown ao clicar */
