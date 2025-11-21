@@ -1,0 +1,103 @@
+/* Header principal do topo da página */
+header{
+    margin-top: 30px;
+    padding: 14px 24px 14px 14px;
+}
+/* Barra de navegação com layout flex e estilo arredondado */
+.nav-bar{
+    margin-top: 30px;
+    width: clamp(358px, 85%, 1200px);
+    height: clamp(58px, 8vh, 73px);
+    padding: 14px 24px 14px;
+    border: 1px solid var(--background--secundary);
+    border-radius: 50px;
+    background: var(--background--primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Texto e logo alinhados na esquerda */
+.nav-bar p{
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+/* Logo inserida antes do texto */
+.nav-bar p::before{
+    content: url('../assets/logo.png');
+    margin-right: 5px;
+}
+/* Menu oculto no mobile */
+.nav-bar nav{
+    display: none;
+    height: auto;
+    padding: 2px;
+}
+/* Botão do menu hamburguer no mobile */
+.btn-menu{
+    border-radius: 50px;
+    border: none;
+    background: var(--background--button);
+    padding: 6px 14px;
+    width: 56px;
+    height: 40px;
+    display: flex;
+    gap: 14px;
+    position: relative;
+}
+/* Dropdown do menu no mobile */
+.menu-list{ 
+    display: none;
+    height: auto; 
+    line-height: 28px; 
+    list-style: none; 
+    position: absolute; 
+    top: 70px; 
+    z-index: 5;
+}
+/* Exibe o dropdown ao clicar */
+.menu-list.show{
+    display: block ;
+}
+
+/* Layout para tablets: mostra menu e esconde botão */
+@media screen and (min-width: 600px) {
+    .nav-bar nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: clamp(480px, 55vw, 600px);
+    }
+    .btn-menu{
+        display: none;
+    }
+    .menu-list{
+        display: inline-flex; 
+        top: 0;
+        position: relative; 
+        gap: 10px; 
+        font-weight: 400;
+        width: 150px;
+        justify-content: space-around;
+    }
+    /* Transição suave para os links do menu */
+    .menu-list a{
+        transition: all 0.3s ease;
+    }
+    /* Efeito hover nos links do menu: aumenta o padding, coloca fundo, muda a cor do texto e arredonda */
+    .menu-list a:hover{
+        padding: 15px;
+        background: var(--background--button);
+        color: #000;
+        border-radius: 50px;
+    }
+}
+
+/* Layout para desktop com largura maior */
+@media screen and (min-width: 1200px) {
+    .nav-bar{
+        width: clamp(1000px, 80vw, 1280px);
+        height: 73px;
+    }
+}

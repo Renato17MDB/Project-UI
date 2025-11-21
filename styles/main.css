@@ -1,0 +1,273 @@
+/* Área principal usando flexbox em coluna, centralizando todo o conteúdo
+   e distribuindo os elementos com espaçamento uniforme */
+main{
+    justify-content: space-between;
+    height: clamp(8720px, 100vh, 5674px);
+}
+/* Define largura padrão para cada section no layout mobile */
+section{
+    width: clamp(358px, 95%, 1280px);
+}
+/* Estilização das sections diretamente dentro do main,
+   deixando-as centralizadas e organizadas em coluna */
+main>section{
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Classe utilitária para criar colunas com espaço entre itens */
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hero-section{
+    background-color: aqua;
+    min-height: 818.2px;
+}
+
+.products-section{
+    background-color: red;
+    min-height: 1076px;
+}
+
+.cases-section{
+    background-color: green;
+    min-height: 2362px;
+}
+
+/*---------------------------------------------- FEATURES SECTION ----------------------------------------------*/
+
+/* Seção principal da área de features: define espaçamento entre elementos e altura mínima */
+.features-section{
+    gap: 50px;
+    min-height: 1182px;
+}
+/* Container do texto introdutório das features: controla largura responsiva e espaçamento interno */
+.container-text-features{
+    width: clamp(366px, 80%, 1200px);
+    height: clamp(136px, 8vh, 115px);
+    gap: 10px;
+}
+/* Container geral que agrupa todos os blocos de features */
+.container-features{
+    width: clamp(366px, 95%, 1280px);
+    height: clamp(996px, 8vh, 474px);
+    gap: 20px;
+}
+/* Subcontainer que organiza os botões de navegação/filtragem das features */
+.subcontainer-buttons-features{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: var(--background--primary);
+}
+/* Estilização padrão dos botões dentro do subcontainer */
+.subcontainer-buttons-features button{
+    border: 1px solid #fff;
+    border-radius: 25px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    height: 49px;
+    background: var(--background--secundary);
+}
+/* Ajuste tipográfico do texto dentro dos botões */
+.subcontainer-buttons-features button>span{
+    font-size: 14px;
+}
+/* Subcontainer específico que organiza a coluna de cards */
+.subcontainer-features{
+    gap: 20px;
+    width: 366px;
+    height: 887px;
+}
+/* Estilização dos cards que apresentam cada feature */
+.subcontainer-features-cards{
+    border: 1px solid #FFF;
+    border-radius: 15px;
+    padding: 30px;
+    width: 366px;
+    height: 212px;
+    gap: 20px;
+    background: var(--background--primary);
+}
+/* Cabeçalho interno de cada card: título e ícone alinhados */
+.subcontainer-features-cards div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 27px;
+    padding: 1px;
+}
+/* Cor dos ícones dentro dos cards */
+.subcontainer-features-cards i{
+    color: var(--background--button);
+}
+/*---------------------------------------------- FEATURES SECTION ----------------------------------------------*/
+
+.faq-section{
+    background-color: yellow;
+    min-height: 1614px;
+}
+
+.testimonials-section{
+    background-color: greenyellow;
+    min-height: 616px;
+}
+/*---------------------------------------------- CTA SECTION ----------------------------------------------*/
+
+/* Caixa principal do call-to-action (CTA):
+   espaçamento interno, borda, estilo, altura mínima e controle de overflow */
+.cta-section{
+    gap: 24px;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--background--secundary);
+    min-height: 360px;
+    position: relative;
+    overflow: hidden;
+}
+/* Posição do background decorativo dentro do CTA */
+.cta-section > .background-dots{
+    left: 0;
+    top: -2px;
+    z-index: -1;
+}
+/* Container dos textos do CTA, garantindo espaçamento e tamanho mínimo */
+.container-text-cta{
+    gap: 14px;
+    min-width: 298px;
+    min-height: 227px;
+}
+/* Estilização do título do CTA */
+.container-text-cta h2{
+    color: #fff;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Ajustes para telas médias: CTA vira linha e muda alinhamento */
+@media screen and (min-width:600px) {
+    section{
+        min-width: 780px;
+    }
+
+    /*-------------------- FEATURES SECTION --------------------*/
+
+    /* Ajustes da seção de features para telas maiores: reduz gap e altura mínima */
+    .features-section{
+        gap: 45px;
+        min-height:474px;
+    }
+    /* Ajuste de alinhamento do texto no desktop, adicionando padding lateral */
+    .container-text-features{
+        padding-right: 80px;
+    }
+    /* Títulos e parágrafos alinhados à esquerda no layout desktop */
+    .container-text-features h1,
+    .container-text-features p{
+        text-align: left;
+    }
+    /* Distribui elementos lado a lado e define altura fixa para a área de features */
+    .container-features{
+        flex-direction: row;
+        height: 474px;
+    }
+    /* Coloca botões empilhados verticalmente e define área lateral fixa */
+    .subcontainer-buttons-features{
+        flex-direction: column;
+        padding: 40px;
+        width: 245px;
+        height: 474px;
+    }
+    /* Grid com duas colunas para os cards no desktop, mantendo altura da área */
+    .subcontainer-features{
+        height: 474px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* Configuração do slider: limita o scroll horizontal e aplica máscara de fade nas laterais */
+    .slider{
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+    }
+    /* Área dos botões de navegação do slider no desktop */
+    .button-section{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+    /* Estilo dos botões de navegação: formato circular e padding interno */
+    .button-section button{
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        padding: 10px;
+    }
+
+    /*------------------------ CTA SECTION ------------------------*/
+    .cta-section{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 45px;
+        min-height: 223px;
+    }
+
+    .container-text-cta{
+        min-height: 103px;
+        gap: 10px;
+    }
+    /* Alinha o texto à esquerda em telas maiores */
+    .container-text-cta h2,
+    .container-text-cta p{
+        text-align: left;
+    }
+
+    .open-account-btn:hover{
+        color: #fff;
+        background: transparent;
+        border: 1px solid var(--background--button);
+    }
+}
+/* Ajustes para telas grandes: aumenta a largura e padding do CTA */
+@media screen and (min-width: 1200px) {
+
+    .features-section{
+        gap: 60px;
+    }
+
+    .subcontainer-buttons-features{
+        height: 267px;
+        width: 245px;
+    }
+
+    .container-features{
+        height: 649px;
+    }
+
+    .subcontainer-features{
+        width: 1015px;
+        height: 474px;
+        padding: 10px;
+    }
+
+    .slider{
+        background: none;
+    }
+
+    .button-section{
+        display: none;
+    }
+    .cta-section{
+        padding: 60px;
+    }
+
+}

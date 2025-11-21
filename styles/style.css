@@ -1,0 +1,57 @@
+@import url(../styles/header.css);
+@import url(../styles/main.css);
+@import url(../styles/footer.css);
+@import url(../styles/tipography.css);
+
+:root{
+    --background--page:#1A1A1A; /*GREY 10*/
+    --background--primary:#1C1C1C; /*GREY 11*/
+    --background--secundary:#262626; /*GREY 15*/
+    --background--button:#CAFF33; /*GREEN 60*/
+
+    --paragraph--color:#b3b3b3;
+    --text--color:#FFF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background:var(--background--page);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-width:390px;
+    height: 9290px;
+    position: relative;
+}
+
+header, main, footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.background-dots{
+    width: 382px;
+    height:307.42px;
+    background-image: url('../assets/dots.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 1em;
+    position: absolute;
+    z-index: 1;
+}
+

@@ -1,0 +1,72 @@
+/*----------------------------- PARAGRAPH -----------------------------*/
+p{
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+    color: var(--paragraph--color);
+}
+
+.container-text-features p{
+    font-weight: 300;
+}
+
+.subcontainer-features-cards p{
+    font-weight: 300;
+    text-align: left;
+}
+/* Estilos para o parágrafo do CTA */
+.container-text-cta p{
+    font-weight: 300;
+}
+/*----------------------------- PARAGRAPH -----------------------------*/
+
+/*----------------------------- BUTTON -----------------------------*/
+button{
+    cursor: pointer;
+}
+/* Botão de abrir conta: sem borda, arredondado e com cor personalizada */
+.open-account-btn{
+    border: none;
+    transition: all .3s ease;
+    border-radius: 25px;
+    padding: 14px 24px;
+    background: var(--background--button);
+    min-width: 144px;
+    min-height: 49px;
+}
+/* Estilização do texto (span) dentro do botão */
+.open-account-btn>span{
+    font-size: 14px;
+    font-weight: 400;
+}
+/*----------------------------- BUTTON -----------------------------*/
+
+/*----------------------------- LINKS -----------------------------*/
+a{
+    text-decoration: none;
+    color: var(--text--color);
+}
+a:hover{
+    color: #CAFF33;
+}
+
+/*----------------------------- LINKS -----------------------------*/
+
+/*----------------------------- TITULES -----------------------------*/
+
+/* Texto que precisa ser destacado */
+h1,h2,h3,h4,h5{
+    text-align: center;
+    color: var(--text--color);
+}
+.highlight-text{
+    color: var(--background--button);
+}
+
+.subcontainer-features-cards h3{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/*----------------------------- TITULES -----------------------------*/
+
