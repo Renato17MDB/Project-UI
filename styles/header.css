@@ -17,7 +17,7 @@ header{
     justify-content: space-between;
 }
 /* Torna o container relativo, para o dropdown usar como referência */
-.nav-bar div{
+.button-menu{
     position: relative;
 }
 /* Texto e logo alinhados na esquerda */
@@ -57,7 +57,7 @@ header{
     line-height: 28px; 
     list-style: none; 
     position: absolute; 
-    top: 5%; 
+    top: 10%; 
     z-index: 5;
 }
 /* Exibe o dropdown ao clicar */
