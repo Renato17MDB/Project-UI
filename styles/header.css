@@ -16,6 +16,10 @@ header{
     align-items: center;
     justify-content: space-between;
 }
+/* Torna o container relativo, para o dropdown usar como referência */
+.nav-bar div{
+    position: relative;
+}
 /* Texto e logo alinhados na esquerda */
 .nav-bar p{
     font-size: 18px;
@@ -53,7 +57,7 @@ header{
     line-height: 28px; 
     list-style: none; 
     position: absolute; 
-    top: 15%; 
+    top: 5%; 
     z-index: 5;
 }
 /* Exibe o dropdown ao clicar */
