@@ -108,6 +108,10 @@ main>section{
 .subcontainer-features-cards i{
     color: var(--background--button);
 }
+
+.button-section{
+    display: none;
+}
 /*---------------------------------------------- FEATURES SECTION ----------------------------------------------*/
 
 .faq-section{
