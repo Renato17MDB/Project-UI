@@ -53,11 +53,11 @@ header{
 /* Dropdown do menu no mobile */
 .menu-list{ 
     display: none;
-    height: auto; 
     line-height: 28px; 
     list-style: none; 
     position: absolute; 
-    top: 10%; 
+    top: 100%; 
+    right:0;
     width: 7vw;
     z-index: 5;
 }
